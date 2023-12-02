@@ -1,0 +1,66 @@
+@import "./reset.css";
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,700;1,9..40,500&family=Poppins:wght@400;500;700&display=swap");
+html,
+body {
+  font-family: "DM Sans", sans-serif;
+}
+:root {
+  --nav-bg: #171718;
+  --text-color: #ffffff;
+  --border-color: #26292d;
+  --nav-before: #5c62ec;
+}
+.container {
+  width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+/* nav */
+.nav {
+  border-bottom: 1px solid var(--border-color);
+  padding: 20px 0;
+  background-color: var(--nav-bg);
+  color: var(--text-color);
+}
+.nav-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 30px;
+  row-gap: 20px;
+  flex-wrap: wrap;
+}
+.logo {
+  color: var(--text-color);
+  font-size: 24px;
+  font-family: "Poppins", sans-serif;
+}
+.logo strong {
+  font-weight: 700px;
+}
+.nav-list {
+  display: flex;
+  align-items: center;
+  column-gap: 40px;
+  font-size: 16px;
+  font-weight: 500px;
+  font-family: "Poppins", sans-serif;
+}
+
+.nav-list-link {
+  color: var(--text-color);
+}
+.nav-list-link--active {
+  position: relative;
+}
+.nav-list-link--active::before {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: var(--nav-before);
+  position: absolute;
+  left: 0;
+  top: 100%;
+  
+}
